@@ -427,7 +427,7 @@ client.on('message', msg => {
 
 client.on('message', msg => {
 
-  if (msg.content === 'اسكت) {
+  if (msg.content === 'اسكت') {
 
     msg.reply('منشن العضو لكي تعطيه ميوت ❌');
 
