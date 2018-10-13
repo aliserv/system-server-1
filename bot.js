@@ -16,6 +16,48 @@ client.on('ready', () => {
 
 
 
+
+
+
+
+
+
+
+client.on('message', message => {
+
+    if (message.content.startsWith("رابط")) {
+
+        message.channel.createInvite({ thing: true, maxUses: 5, maxAge: 86400 }).then(invite => {
+
+            message.author.send(`**مدة الرابط يوم عدد استخدامات الرابط 5 ${invite.url}` )
+
+            message.channel.send(`**[ تم ارسال الرابط برسالة خاصة ✅ ] <@${message.author.id}> **`).then(msg => msg.delete(3500)); 
+
+        });
+
+    };
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 client.on('message', function(msg) {
   if(msg.content.startsWith ('معلومات السيرفر')) {
     if(!msg.channel.guild) return msg.reply('**:x: اسف لكن هذا الامر للسيرفرات فقط **');         
