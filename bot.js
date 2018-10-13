@@ -29,7 +29,7 @@ client.on('message', message => {
 
         message.channel.createInvite({ thing: true, maxUses: 5, maxAge: 86400 }).then(invite => {
 
-            message.author.send(`**مدة الرابط يوم عدد استخدامات الرابط 5 ${invite.url}` )
+            message.author.send(`**مدة الرابط يوم عدد استخدامات الرابط 5 ${invite.url}**` )
 
             message.channel.send(`**[ تم ارسال الرابط برسالة خاصة ✅ ] <@${message.author.id}> **`).then(msg => msg.delete(3500)); 
 
